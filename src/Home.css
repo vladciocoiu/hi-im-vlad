@@ -1,0 +1,103 @@
+.home {
+   width: 100vw;
+   height: 100vh;
+   background-color: #2f918c;
+   color: #feffff;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.home h2 {
+   font-weight: normal;
+   font-size: 50px;
+   line-height: 1.2;
+}
+
+.home-button {
+   background: none;
+   color: #feffff;
+   width: auto;
+   height: 70px;
+   font-size: 30px;
+   margin: 30px;
+
+   border-style: solid;
+   border-width: 2px;
+   padding: 15px;
+}
+
+.arrow {
+   position: relative;
+   top: 4px;
+}
+
+.home-name {
+   font-style: normal;
+   color: #fd5058;
+}
+
+@media screen and (max-width: 990px) {
+   .home h2 {
+      font-size: 35px;
+   }
+   .home-button {
+      font-size: 23px;
+   }
+}
+
+@keyframes home-btn-anim {
+   0% {
+      background: none;
+   }
+   100% {
+      background: #17252a;
+      border-color: #17252a;
+   }
+}
+
+@keyframes home-btn-anim-rev {
+   0% {
+      background: #17252a;
+      border-color: #17252a;
+   }
+   100% {
+      background: none;
+   }
+}
+
+.home-button-hovered {
+   animation: home-btn-anim 0.2s linear forwards;
+}
+
+.home-button-rev {
+   animation: home-btn-anim-rev 0.2s linear forwards;
+}
+
+@keyframes arrow-spin {
+   from {
+      transform: rotate(0deg);
+   }
+   to {
+      transform: rotate(90deg);
+   }
+}
+
+@keyframes arrow-spin-reverse {
+   from {
+      transform: rotate(90deg);
+   }
+   to {
+      transform: rotate(0deg);
+   }
+}
+
+.arrow-over {
+   animation: arrow-spin 0.2s linear forwards;
+}
+
+.arrow-out {
+   animation: arrow-spin-reverse 0.2s linear forwards;
+}

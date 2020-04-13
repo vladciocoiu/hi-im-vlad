@@ -1,0 +1,269 @@
+.logo {
+   text-transform: uppercase;
+   letter-spacing: 3px;
+   font-size: 1.8vh;
+   font-weight: bold;
+   color: #feffff;
+   z-index: 30;
+}
+
+nav {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+   min-height: 8vh;
+   background-color: #17252a;
+   position: sticky;
+   top: 0;
+   right: 0;
+   width: 100vw;
+   z-index: 20;
+   font-family: "Poppins", sans-serif;
+}
+
+.nav-links {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+   background-color: #17252a;
+   width: 25%;
+}
+
+ul {
+   list-style-type: none;
+}
+
+.burger-menu span {
+   background-color: #feffff;
+   width: 40px;
+   height: 2px;
+   color: #feffff;
+   border: double;
+   border-width: 1.5px;
+}
+
+.burger-menu {
+   display: none;
+   z-index: 30;
+   transform: scale(0.8);
+}
+
+.burger-menu.visible {
+   visibility: visible;
+   pointer-events: auto;
+}
+
+.burger-menu.hidden {
+   visibility: hidden;
+   pointer-events: none;
+}
+
+.black-overlay {
+   position: fixed;
+   pointer-events: none;
+   top: 0;
+   left: 0;
+   height: 100vh;
+   width: 100vw;
+   background-color: black;
+   opacity: 0;
+   z-index: 19;
+}
+
+@keyframes black-animation {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 0.5;
+   }
+}
+
+@keyframes black-animation-rev {
+   0% {
+      opacity: 0.5;
+   }
+   100% {
+      opacity: 0;
+   }
+}
+
+.black-active {
+   animation: black-animation 0.5s ease-in forwards;
+}
+.black-rev {
+   animation: black-animation-rev 0.5s ease-in forwards;
+}
+
+.nav-links button {
+   text-decoration: none;
+   color: #feffff;
+   background: none;
+   border: none;
+   font-size: 17px;
+   font-weight: normal;
+   z-index: 30;
+}
+
+@media screen and (max-width: 990px) {
+   .nav-links {
+      flex-direction: column;
+      position: fixed;
+      z-index: 10;
+      right: -300px;
+      top: 0;
+      height: 100vh;
+      width: 300px;
+   }
+   .burger-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 50px;
+      width: 50px;
+   }
+   .nav-links button {
+      font-size: 20px;
+   }
+   .logo {
+      position: relative;
+      left: 20px;
+   }
+}
+
+@media screen and (max-width: 600px) {
+   .nav-links {
+      width: 200px;
+   }
+}
+
+.nav-active {
+   animation: sidebar-animation 0.5s ease-in forwards;
+}
+
+.nav-rev {
+   animation: sidebar-animation-rev 0.5s ease-in forwards;
+}
+
+@keyframes sidebar-animation {
+   0% {
+      transform: translateX(0px);
+   }
+   100% {
+      transform: translateX(-300px);
+   }
+}
+
+@keyframes sidebar-animation-rev {
+   0% {
+      transform: translateX(-300px);
+   }
+   100% {
+      transform: translateX(0px);
+   }
+}
+
+@keyframes nav-link-animation {
+   0% {
+      transform: scale(1);
+   }
+   100% {
+      transform: scale(1.1);
+   }
+}
+
+@keyframes nav-link-animation-reverse {
+   0% {
+      transform: scale(1.1);
+   }
+   100% {
+      transform: scale(1);
+   }
+}
+
+.nav-link-hover {
+   animation: nav-link-animation 0.2s linear forwards;
+}
+.nav-link-rev {
+   animation: nav-link-animation-reverse 0.2s linear forwards;
+}
+
+@keyframes spin {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: translateY(-13px) rotate(-135deg);
+   }
+}
+
+@keyframes spin-reverse {
+   0% {
+      transform: translateY(-13px) rotate(-135deg);
+   }
+   100% {
+      transform: rotate(0deg);
+   }
+}
+
+@keyframes disappear {
+   0% {
+      transform: translate(0px, 0px);
+      opacity: 1;
+   }
+   100% {
+      transform: translate(40px, 0px);
+      opacity: 0;
+   }
+}
+
+@keyframes disappear-reverse {
+   0% {
+      transform: translate(40px, 0px);
+      opacity: 0;
+   }
+   100% {
+      transform: translate(0px, 0px);
+      opacity: 1;
+   }
+}
+
+@keyframes spin1 {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: translateY(13px) rotate(135deg);
+   }
+}
+
+@keyframes spin1-reverse {
+   0% {
+      transform: translateY(13px) rotate(135deg);
+   }
+   100% {
+      transform: rotate(0deg);
+   }
+}
+
+.line-1.animate {
+   animation: spin1 0.5s ease-in forwards;
+}
+.line-2.animate {
+   animation: disappear 0.5s ease-in forwards;
+}
+.line-3.animate {
+   animation: spin 0.5s ease-in forwards;
+}
+.line-1.animate-rev {
+   animation: spin1-reverse 0.5s ease-in forwards;
+}
+.line-2.animate-rev {
+   animation: disappear-reverse 0.5s ease-in forwards;
+}
+.line-3.animate-rev {
+   animation: spin-reverse 0.5s ease-in forwards;
+}
