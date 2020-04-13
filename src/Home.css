@@ -48,6 +48,12 @@
    }
 }
 
+@media screen and (max-width: 600px) {
+   .home h2 {
+      font-size: 30px;
+   }
+}
+
 @keyframes home-btn-anim {
    0% {
       background: none;
