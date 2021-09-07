@@ -34,7 +34,7 @@ footer {
 }
 
 .social-media-icon {
-   width: 35px;
+   width: 25px;
    height: auto;
    margin: 1vw;
 }
@@ -42,7 +42,6 @@ footer {
 @media screen and (max-width: 600px) {
    .social-media-icon {
       margin: 2vw;
-      width: 25px;
    }
 }
 
