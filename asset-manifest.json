@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/hi-im-vlad/static/css/main.777afa24.chunk.css",
+    "main.js": "/hi-im-vlad/static/js/main.464eb9ca.chunk.js",
+    "main.js.map": "/hi-im-vlad/static/js/main.464eb9ca.chunk.js.map",
+    "runtime-main.js": "/hi-im-vlad/static/js/runtime-main.01eeef9f.js",
+    "runtime-main.js.map": "/hi-im-vlad/static/js/runtime-main.01eeef9f.js.map",
+    "static/js/2.d85ce09b.chunk.js": "/hi-im-vlad/static/js/2.d85ce09b.chunk.js",
+    "static/js/2.d85ce09b.chunk.js.map": "/hi-im-vlad/static/js/2.d85ce09b.chunk.js.map",
+    "index.html": "/hi-im-vlad/index.html",
+    "precache-manifest.5c4338b24bce61966dfe62b46ab444aa.js": "/hi-im-vlad/precache-manifest.5c4338b24bce61966dfe62b46ab444aa.js",
+    "service-worker.js": "/hi-im-vlad/service-worker.js",
+    "static/css/main.777afa24.chunk.css.map": "/hi-im-vlad/static/css/main.777afa24.chunk.css.map",
+    "static/js/2.d85ce09b.chunk.js.LICENSE.txt": "/hi-im-vlad/static/js/2.d85ce09b.chunk.js.LICENSE.txt",
+    "static/media/chessEngine.png": "/hi-im-vlad/static/media/chessEngine.cec48716.png",
+    "static/media/pathfindingBig.png": "/hi-im-vlad/static/media/pathfindingBig.3a6b6a19.png",
+    "static/media/sudokuBig.png": "/hi-im-vlad/static/media/sudokuBig.00866f3b.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.01eeef9f.js",
+    "static/js/2.d85ce09b.chunk.js",
+    "static/css/main.777afa24.chunk.css",
+    "static/js/main.464eb9ca.chunk.js"
+  ]
+}
