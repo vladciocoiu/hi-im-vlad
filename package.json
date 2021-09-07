@@ -1,7 +1,7 @@
 {
    "name": "state-management",
    "version": "0.1.0",
-   "homepage": "https://ciorap88.github.io/hi-im-vlad",
+   "homepage": "https://vladciocoiu.github.io/hi-im-vlad",
    "private": true,
    "dependencies": {
       "@mdi/font": "^5.0.45",

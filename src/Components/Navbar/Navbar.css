@@ -25,10 +25,10 @@ nav {
 .nav-links {
    display: flex;
    flex-direction: row;
-   justify-content: space-around;
+   justify-content: space-between;
    align-items: center;
    background-color: #17252a;
-   width: 25%;
+   width: 15%;
 }
 
 ul {
@@ -110,6 +110,7 @@ ul {
 @media screen and (max-width: 990px) {
    .nav-links {
       flex-direction: column;
+      justify-content: space-evenly;
       position: fixed;
       z-index: 10;
       right: -300px;
@@ -169,26 +170,33 @@ ul {
 @keyframes nav-link-animation {
    0% {
       transform: scale(1);
+      color: #feffff;
    }
    100% {
       transform: scale(1.1);
+      color: white;
+      letter-spacing: 1px;
    }
 }
 
 @keyframes nav-link-animation-reverse {
    0% {
       transform: scale(1.1);
+      color: white;
+      letter-spacing: 1px;
    }
    100% {
       transform: scale(1);
+      color: #feffff;
    }
 }
 
 .nav-link-hover {
-   animation: nav-link-animation 0.2s linear forwards;
+   animation: nav-link-animation 0.15s linear forwards;
+   cursor: pointer;
 }
 .nav-link-rev {
-   animation: nav-link-animation-reverse 0.2s linear forwards;
+   animation: nav-link-animation-reverse 0.15s linear forwards;
 }
 
 @keyframes spin {

@@ -1,0 +1,136 @@
+.project {
+  position: relative;
+  width: 40vw;
+  height: 19vw;
+  margin-bottom: 10vh;
+  opacity: 0;
+}
+
+.project img,
+.project .overlay {
+  width: 40vw;
+  height: 19vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.project .overlay {
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.project .overlay h1 {
+  color: #17252a;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  position: relative;
+  bottom: 30%;
+}
+
+.project .overlay a,
+.project .overlay h1 {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.project .overlay a {
+  text-decoration: none;
+  outline: none;
+  color: #17252a;
+  font-size: 150%;
+  border: 2px solid #2f918c;
+  padding: 10px 20px;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  position: relative;
+  bottom: -30%;
+}
+
+.project .overlay a:hover {
+  color: white;
+  background-color: #2f918c;
+}
+
+.project .overlay:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.project .overlay:hover a,
+.project .overlay:hover .project-title {
+  bottom: 0;
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media screen and (max-width: 770px) {
+  .project {
+    width: 90vw;
+    height: 42.8vw;
+  }
+  .project img,
+  .project .overlay {
+    width: 90vw;
+    height: 42.8vw;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .project .overlay .project-title {
+    font-size: 100%;
+  }
+  .project a {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+
+@-webkit-keyframes slideUpAnimation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slideUpAnimation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.animated-slide-up {
+  -webkit-animation: slideUpAnimation 0.5s ease-in-out forwards;
+          animation: slideUpAnimation 0.5s ease-in-out forwards;
+}
+
+.project-1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+/*# sourceMappingURL=ListProject.css.map */

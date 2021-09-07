@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import About from "./About";
-import Home from "./Home";
-import Projects from "./Projects";
+
+import Navbar from "./Components/Navbar/Navbar";
+import Footer from "./Components/Footer/Footer";
+import About from "./Components/About/About";
+import Home from "./Components/Home/Home";
+import Projects from "./Components/Projects/Projects";
 
 ReactDOM.render(
    <>

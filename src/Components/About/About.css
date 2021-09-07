@@ -1,0 +1,54 @@
+.about {
+   font-size: 15px;
+   width: 100vw;
+   min-height: 100vh;
+   height: auto;
+   margin: auto;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+
+   display: grid;
+   grid-template-columns: 1.5fr 4fr 4fr 1.5fr;
+   grid-template-rows: 2fr 2fr 1fr;
+   grid-template-areas:
+      ". a a ."
+      ". b c ."
+      ". . . .";
+   grid-gap: 3% 3%;
+}
+
+.about h2 {
+   font-weight: normal;
+   opacity: 0;
+   color: #17252a;
+   line-height: 2;
+}
+
+.about .title-wrapper {
+   grid-area: a;
+}
+
+.text-0 {
+   grid-area: b;
+}
+
+.text-1 {
+   grid-area: c;
+}
+
+@media screen and (max-width: 990px) {
+   .about {
+      grid-template-areas:
+         ". a ."
+         ". b ."
+         ". c ."
+         ". . .";
+      grid-template-columns: 1fr 8fr 1fr;
+      grid-template-rows: 2fr 2fr 2fr 1fr;
+   }
+
+   .about h2 {
+      font-size: 20px;
+   }
+}

@@ -1,14 +1,16 @@
 import React from "react";
 import "./Footer.css";
 
+import LinkedInLogo from "../../images/logos/LinkedIn.png";
+import GithubLogo from "../../images/logos/Github.png";
+
 export default function Footer() {
-   const items = ["Facebook", "Youtube", "Instagram", "Github"];
+   const items = ["LinkedIn", "Github"];
    const urls = [
-      "https://www.facebook.com/vled3/",
-      "https://www.youtube.com/channel/UCc8cF-V791gNRlrpiRvZyuQ?view_as=subscriber",
-      "https://www.instagram.com/vladd.88/",
+      "https://www.linkedin.com/in/vlad-ciocoiu/",
       "https://github.com/Ciorap88",
    ];
+   const srcs = [LinkedInLogo, GithubLogo];
 
    return (
       <footer>
@@ -22,7 +24,7 @@ export default function Footer() {
                   >
                      <img
                         className="social-media-icon"
-                        src={"./images/logos/" + item + ".png"}
+                        src={srcs[index]}
                         alt={item}
                      />
                   </a>
@@ -30,7 +32,7 @@ export default function Footer() {
             ))}
          </ul>
          <h2 className="email">Email: vlad.014916@gmail.com </h2>
-         <h2 className="copyright">© 2020 Vlad Ciocoiu</h2>
+         <h2 className="copyright">© 2021 Vlad Ciocoiu</h2>
       </footer>
    );
 }

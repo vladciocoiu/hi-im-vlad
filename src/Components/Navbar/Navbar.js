@@ -42,8 +42,6 @@ function ListItem({ value }) {
       setHovered(!hovered);
    };
 
-   // maybe it's considered bad practice to access the DOM directly but I find it
-   // easier to do this than to use context
    const handleClick = () => {
       const section = document.querySelector("." + value.toLowerCase());
       section.scrollIntoView(true);
@@ -66,7 +64,7 @@ function ListItem({ value }) {
 }
 
 function BurgerMenu({ active, update }) {
-   let buttonLocked = false;
+   const [buttonLocked, setButtonLocked] = useState(false);
    const [visible, setVisible] = useState(false);
 
    useEffect(() => {
@@ -87,8 +85,8 @@ function BurgerMenu({ active, update }) {
       if (buttonLocked) return;
 
       ///lock the button to prevent spamming
-      buttonLocked = true;
-      setTimeout(() => (buttonLocked = false), 500);
+      setButtonLocked(true);
+      setTimeout(() => setButtonLocked(false), 500);
       update();
    };
 

@@ -1,0 +1,40 @@
+.projects {
+   width: 100vw;
+   height: auto;
+   min-height: 100vh;
+   margin: auto;
+   display: grid;
+   grid-template-areas:
+      "title title"
+      "p p"
+      "p p"
+      ". .";
+   grid-template-rows: 2fr 2fr 2fr 1fr;
+   grid-gap: 0 5vw;
+   justify-content: center;
+   align-items: center;
+   background-color: #ebf5f5;
+}
+
+.projects h2 {
+   font-weight: normal;
+   line-height: 2;
+   width: 80vw;
+   margin: auto;
+}
+
+.projects .title-wrapper {
+   grid-area: title;
+}
+
+@media screen and (max-width: 770px) {
+   .projects {
+      grid-template-areas:
+         "title"
+         "p"
+         "p"
+         "p"
+         ".";
+      grid-template-rows: 2fr 2fr 2fr 2fr 1fr;
+   }
+}
