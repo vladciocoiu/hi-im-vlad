@@ -4,48 +4,56 @@ import SectionTitle from "../SectionTitle/SectionTitle";
 
 export default function About() {
    const desc = [
-      "My name is Vlad Ciocoiu and I'm a student at The Faculty of Mathematics and Computer Science of the University of Bucharest. ",
-      "My hobbies include programming, travelling, chess, speedcubing and learning about science. ",
+      "I'm a student at The Faculty of Mathematics and Computer Science of the University of Bucharest.",
+      "My hobbies include programming, travelling, chess, speedcubing and learning about science.",
    ];
 
    return (
       <div className="about">
          <SectionTitle name="about" left={true} />
-         {desc.map((string, index) => (
-            <DisplayText
-               text={string}
-               index={index}
-               left={!(index % 2)}
-               key={index}
-            />
-         ))}
+         <DisplayText text={desc.join(" ")} />
       </div>
    );
 }
 
-function DisplayText({ text, index, left }) {
+function DisplayText({ text }) {
    const h2Ref = React.useRef();
    const [isDiscovered, setIsDiscovered] = useState(false);
+   const [currText, setCurrText] = useState("");
+   const [isUnderscoreVisible, setIsUnderscoreVisible] = useState(false);
+
    const handleScroll = () => {
+      if (isDiscovered) return;
       setIsDiscovered(isVisible(h2Ref, handleScroll));
    };
 
    useEffect(() => {
+      if (currText !== "") setIsUnderscoreVisible(true);
+      if (currText !== text) return;
+      setInterval(() => setIsUnderscoreVisible((i) => !i), 500);
+   }, [currText, text]);
+
+   useEffect(() => {
       window.addEventListener("scroll", handleScroll);
-      return () => {
-         window.removeEventListener("scroll", handleScroll);
-      };
+      return () => window.removeEventListener("scroll", handleScroll);
    });
 
-   let animationClass = "";
-   if (isDiscovered) {
-      if (left) animationClass = " animated-slide-in-left ";
-      else animationClass = " animated-slide-in-right ";
-   }
+   useEffect(() => {
+      function handleCurrText() {
+         if (!isDiscovered || currText === text) return;
+
+         const nextChar = text[currText.length];
+         setTimeout(
+            () => setCurrText(currText + nextChar),
+            nextChar === " " ? 70 : 50
+         );
+      }
+      handleCurrText();
+   }, [currText, isDiscovered, text]);
 
    return (
-      <h2 ref={h2Ref} className={"text-" + index + animationClass}>
-         {text}
+      <h2 ref={h2Ref} className={"text"}>
+         {currText + (isUnderscoreVisible ? "_" : " ")}
       </h2>
    );
 }

@@ -20,12 +20,13 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
+      border: 1px solid #17252a;
 
       h1 {
          color: #17252a;
          transition: 0.3s ease-out;
-         position: relative;
-         bottom: 30%;
+         position: absolute;
+         top: 0;
       }
 
       a,
@@ -42,8 +43,8 @@
          border: 2px solid #2f918c;
          padding: 10px 20px;
          transition: 0.3s ease-out;
-         position: relative;
-         bottom: -30%;
+         position: absolute;
+         bottom: 0;
       }
 
       a:hover {
@@ -55,9 +56,15 @@
    .overlay:hover {
       background-color: rgba(255, 255, 255, 0.95);
 
+      a {
+         bottom: 20%;
+      }
+      .project-title {
+         top: 20%;
+      }
+
       a,
       .project-title {
-         bottom: 0;
          opacity: 1;
          pointer-events: all;
       }
@@ -66,12 +73,12 @@
 
 @media screen and (max-width: 770px) {
    .project {
-      width: 90vw;
-      height: 42.8vw;
+      width: 80vw;
+      height: 38vw;
       img,
       .overlay {
-         width: 90vw;
-         height: 42.8vw;
+         width: 80vw;
+         height: 38vw;
       }
    }
 }
@@ -89,6 +96,17 @@
    }
 }
 
+@media screen and (max-width: 1200px) {
+   .overlay {
+      .project-title {
+         font-size: 125%;
+      }
+   }
+   a {
+      transform: scale(0.6);
+   }
+}
+
 @keyframes slideUpAnimation {
    0% {
       opacity: 0;
@@ -103,6 +121,7 @@
 .animated-slide-up {
    animation: slideUpAnimation 0.5s ease-in-out forwards;
 }
-.project-1 {
+.project-1,
+.project-2 {
    animation-delay: 0.2s;
 }

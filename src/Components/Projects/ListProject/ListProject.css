@@ -31,14 +31,15 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  border: 1px solid #17252a;
 }
 
 .project .overlay h1 {
   color: #17252a;
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
-  position: relative;
-  bottom: 30%;
+  position: absolute;
+  top: 0;
 }
 
 .project .overlay a,
@@ -56,8 +57,8 @@
   padding: 10px 20px;
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
-  position: relative;
-  bottom: -30%;
+  position: absolute;
+  bottom: 0;
 }
 
 .project .overlay a:hover {
@@ -69,22 +70,29 @@
   background-color: rgba(255, 255, 255, 0.95);
 }
 
+.project .overlay:hover a {
+  bottom: 20%;
+}
+
+.project .overlay:hover .project-title {
+  top: 20%;
+}
+
 .project .overlay:hover a,
 .project .overlay:hover .project-title {
-  bottom: 0;
   opacity: 1;
   pointer-events: all;
 }
 
 @media screen and (max-width: 770px) {
   .project {
-    width: 90vw;
-    height: 42.8vw;
+    width: 80vw;
+    height: 38vw;
   }
   .project img,
   .project .overlay {
-    width: 90vw;
-    height: 42.8vw;
+    width: 80vw;
+    height: 38vw;
   }
 }
 
@@ -95,6 +103,16 @@
   .project a {
     -webkit-transform: scale(0.5);
             transform: scale(0.5);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .overlay .project-title {
+    font-size: 125%;
+  }
+  a {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
   }
 }
 
@@ -129,7 +147,8 @@
           animation: slideUpAnimation 0.5s ease-in-out forwards;
 }
 
-.project-1 {
+.project-1,
+.project-2 {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
