@@ -49,7 +49,7 @@ export default function Skills() {
          <SectionTitle name="Skills" left={false} />
          <div ref={skillsRef} className={"skills-wrapper " + animationClass}>
             <h2 className="languages-heading">Languages</h2>
-            <h2 className="frameworks-heading">Frameworks</h2>
+            <h2 className="frameworks-heading">Frameworks and Technologies</h2>
             {skills.map((skill) => (
                <SkillBar
                   name={skill.name}

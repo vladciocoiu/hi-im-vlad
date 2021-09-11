@@ -29,12 +29,16 @@
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: t1;
+  padding-left: 10vw;
+  padding-right: 10vw;
 }
 
 .frameworks-heading {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: t2;
+  padding-left: 10vw;
+  padding-right: 10vw;
 }
 
 @media screen and (max-width: 900px) {
