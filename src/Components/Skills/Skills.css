@@ -1,0 +1,48 @@
+.skills {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ebf5f5;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "title title title" ". skills ." ". . .";
+  -ms-grid-rows: 2fr 6fr 1fr;
+      grid-template-rows: 2fr 6fr 1fr;
+}
+
+.skills .title-wrapper {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: title;
+}
+
+.skills-wrapper {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: skills;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "t1 t2" "l1 f1" "l2 f2" "l3 .";
+}
+
+.languages-heading {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: t1;
+}
+
+.frameworks-heading {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: t2;
+}
+
+@media screen and (max-width: 900px) {
+  .skills {
+    height: auto;
+  }
+  .skills-wrapper {
+        grid-template-areas: "t1" "l1" "l2" "l3" "t2" "f1" "f2";
+  }
+}
+/*# sourceMappingURL=Skills.css.map */

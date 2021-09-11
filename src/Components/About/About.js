@@ -45,7 +45,7 @@ function DisplayText({ text }) {
          const nextChar = text[currText.length];
          setTimeout(
             () => setCurrText(currText + nextChar),
-            nextChar === " " ? 70 : 50
+            nextChar === " " ? 60 : 50
          );
       }
       handleCurrText();

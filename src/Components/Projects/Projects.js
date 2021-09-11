@@ -11,7 +11,7 @@ import chessEngineImg from "../../images/projects/chessEngine.png";
 export default function Projects() {
    return (
       <div className="projects">
-         <SectionTitle name="projects" left={false} />
+         <SectionTitle name="projects" left={true} />
          <ListProject
             img={chessEngineImg}
             url="https://github.com/vladciocoiu/chess-engine"

@@ -28,7 +28,7 @@ nav {
    justify-content: space-between;
    align-items: center;
    background-color: #17252a;
-   width: 15%;
+   width: 20%;
 }
 
 ul {
@@ -53,6 +53,7 @@ ul {
 .burger-menu.visible {
    visibility: visible;
    pointer-events: auto;
+   cursor: pointer;
 }
 
 .burger-menu.hidden {
@@ -168,10 +169,6 @@ ul {
 }
 
 @keyframes nav-link-animation {
-   0% {
-      transform: scale(1);
-      color: #feffff;
-   }
    100% {
       transform: scale(1.1);
       color: white;

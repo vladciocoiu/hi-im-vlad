@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 
 export default function Navbar() {
-   const items = ["About", "Projects"];
+   const items = ["About", "Skills", "Projects"];
    const [sidebarActive, setSidebarActive] = useState(null);
 
    const updateSidebar = () => {

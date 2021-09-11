@@ -36,6 +36,14 @@
 .home-name {
    font-style: normal;
    color: #fd5058;
+   position: absolute;
+   visibility: visible;
+}
+
+.home-name-placeholder {
+   font-style: normal;
+   position: relative;
+   visibility: hidden;
 }
 
 @media screen and (max-width: 990px) {
