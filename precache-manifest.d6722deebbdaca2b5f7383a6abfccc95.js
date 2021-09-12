@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e6a71edffe0031f233d40973825f38f2",
+    "revision": "ca315696343cf48b1759a60b8e6eb706",
     "url": "/hi-im-vlad/index.html"
   },
   {
-    "revision": "a75d0e295649b6b5eddc",
-    "url": "/hi-im-vlad/static/css/main.6573b14e.chunk.css"
+    "revision": "ce97117a99a2a222eba3",
+    "url": "/hi-im-vlad/static/css/main.dbdbc37a.chunk.css"
   },
   {
     "revision": "af1b874e3f9d367a1645",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hi-im-vlad/static/js/2.dc3e085e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a75d0e295649b6b5eddc",
+    "revision": "ce97117a99a2a222eba3",
     "url": "/hi-im-vlad/static/js/main.9b608568.chunk.js"
   },
   {
