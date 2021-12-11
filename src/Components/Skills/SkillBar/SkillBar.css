@@ -99,31 +99,31 @@
 }
 
 .progress-line.C\+\+ {
-  width: 90%;
+  width: 75%;
 }
 
 .progress-line.JavaScript {
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
-  width: 75%;
+  width: 60%;
 }
 
 .progress-line.Python {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
-  width: 70%;
+  width: 55%;
 }
 
 .progress-line.React\.js {
   -webkit-animation-delay: 0.9s;
           animation-delay: 0.9s;
-  width: 70%;
+  width: 55%;
 }
 
 .progress-line.Node\.js {
   -webkit-animation-delay: 1.2s;
           animation-delay: 1.2s;
-  width: 60%;
+  width: 30%;
 }
 
 .info {

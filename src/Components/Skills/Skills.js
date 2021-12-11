@@ -12,23 +12,23 @@ export default function Skills() {
    const skills = [
       {
          name: "C++",
-         value: 90,
-      },
-      {
-         name: "JavaScript",
          value: 75,
       },
       {
+         name: "JavaScript",
+         value: 60,
+      },
+      {
          name: "Python",
-         value: 70,
+         value: 55,
       },
       {
          name: "React.js",
-         value: 70,
+         value: 55,
       },
       {
          name: "Node.js",
-         value: 60,
+         value: 30,
       },
    ];
 

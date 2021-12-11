@@ -36,26 +36,14 @@ export default function Navbar() {
 }
 
 function ListItem({ value }) {
-   const [hovered, setHovered] = useState(null);
-
-   const handleHover = () => {
-      setHovered(!hovered);
-   };
-
    const handleClick = () => {
       const section = document.querySelector("." + value.toLowerCase());
       section.scrollIntoView(true);
    };
 
-   let thisClass = "";
-   if (hovered === true) thisClass = "nav-link-hover";
-   else if (hovered === false) thisClass = "nav-link-rev";
-
    return (
       <button
-         className={thisClass}
-         onMouseOver={handleHover}
-         onMouseOut={handleHover}
+         className="nav-link"
          onClick={handleClick}
       >
          {value}

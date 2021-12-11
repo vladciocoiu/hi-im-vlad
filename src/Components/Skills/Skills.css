@@ -22,7 +22,7 @@
   grid-area: skills;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "t1 t2" "l1 f1" "l2 f2" "l3 .";
+      grid-template-areas: "t1 t2" "l1 f1" "l2 f2" "l3 .";
 }
 
 .languages-heading {
@@ -46,7 +46,7 @@
     height: auto;
   }
   .skills-wrapper {
-        grid-template-areas: "t1" "l1" "l2" "l3" "t2" "f1" "f2";
+        grid-template-areas: "t1" "l1" "l2" "l3" "t2" "f1" "f2";
   }
 }
 /*# sourceMappingURL=Skills.css.map */

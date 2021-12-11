@@ -98,7 +98,7 @@ ul {
    animation: black-animation-rev 0.5s ease-in forwards;
 }
 
-.nav-links button {
+.nav-link {
    text-decoration: none;
    color: #feffff;
    background: none;
@@ -106,6 +106,28 @@ ul {
    font-size: 17px;
    font-weight: normal;
    z-index: 30;
+   position: relative;
+   transition: 0.15s ease-in-out;
+}
+
+.nav-link:after {
+   content: "";
+   position: absolute;
+   height: 2px;
+   width: 0;
+   bottom: -3px;
+   left: 0;
+   background-color: white;
+   transition: 0.15s ease-in-out;
+}
+
+.nav-link:hover {
+   cursor: pointer;
+   color: white;
+}
+
+.nav-link:hover:after {
+   width: 100%;
 }
 
 @media screen and (max-width: 990px) {
@@ -166,34 +188,6 @@ ul {
    100% {
       transform: translateX(0px);
    }
-}
-
-@keyframes nav-link-animation {
-   100% {
-      transform: scale(1.1);
-      color: white;
-      letter-spacing: 1px;
-   }
-}
-
-@keyframes nav-link-animation-reverse {
-   0% {
-      transform: scale(1.1);
-      color: white;
-      letter-spacing: 1px;
-   }
-   100% {
-      transform: scale(1);
-      color: #feffff;
-   }
-}
-
-.nav-link-hover {
-   animation: nav-link-animation 0.15s linear forwards;
-   cursor: pointer;
-}
-.nav-link-rev {
-   animation: nav-link-animation-reverse 0.15s linear forwards;
 }
 
 @keyframes spin {

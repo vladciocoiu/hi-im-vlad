@@ -61,7 +61,8 @@
   position: absolute;
   bottom: 0;
   width: 30%;
-  height: 18%;
+  min-height: 18%;
+  white-space: nowrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
