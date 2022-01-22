@@ -5,27 +5,33 @@ import SectionTitle from "../SectionTitle/SectionTitle";
 export default function About() {
    const desc = [
       "I'm a student at The Faculty of Mathematics and Computer Science of the University of Bucharest.",
-      "My hobbies include programming, travelling, chess, speedcubing and learning about science.",
+      "My hobbies include programming, reading, travelling, chess, speedcubing and learning about science.",
    ];
 
    return (
-      <div className="about">
+      <section className="about">
          <SectionTitle name="about" left={true} />
          <DisplayText text={desc.join(" ")} />
-      </div>
+      </section>
    );
 }
+
+const isVisible = (ref) => {
+   if (!ref.current) return false;
+   if (
+      ref.current.offsetTop <=
+      window.pageYOffset + (window.innerHeight * 2) / 3
+   ) {
+      return true;
+   }
+   return false;
+};
 
 function DisplayText({ text }) {
    const h2Ref = React.useRef();
    const [isDiscovered, setIsDiscovered] = useState(false);
    const [currText, setCurrText] = useState("");
    const [isUnderscoreVisible, setIsUnderscoreVisible] = useState(false);
-
-   const handleScroll = () => {
-      if (isDiscovered) return;
-      setIsDiscovered(isVisible(h2Ref, handleScroll));
-   };
 
    useEffect(() => {
       if (currText !== "") setIsUnderscoreVisible(true);
@@ -34,9 +40,11 @@ function DisplayText({ text }) {
    }, [currText, text]);
 
    useEffect(() => {
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
-   });
+      window.addEventListener("scroll", () => {
+         if (isDiscovered) return;
+         setIsDiscovered(isVisible(h2Ref));
+      });
+   }, [isDiscovered]);
 
    useEffect(() => {
       function handleCurrText() {
@@ -53,19 +61,7 @@ function DisplayText({ text }) {
 
    return (
       <h2 ref={h2Ref} className={"text"}>
-         {currText + (isUnderscoreVisible ? "_" : " ")}
+         {currText + (isUnderscoreVisible ? " _" : " ")}
       </h2>
    );
 }
-
-const isVisible = (ref, handleScroll) => {
-   if (!ref.current) return false;
-   if (
-      ref.current.offsetTop <=
-      window.pageYOffset + (window.innerHeight * 2) / 3
-   ) {
-      window.removeEventListener("scroll", handleScroll);
-      return true;
-   }
-   return false;
-};

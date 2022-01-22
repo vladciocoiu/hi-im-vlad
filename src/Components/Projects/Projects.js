@@ -10,33 +10,39 @@ import ChessEngineImg from "../../images/projects/chessEngine.png";
 import WeatherImg from "../../images/projects/weatherBig.png";
 
 export default function Projects() {
+   const projectList = [
+      {
+         img: ChessEngineImg,
+         url: "https://github.com/vladciocoiu/chess-engine",
+         title: "Chess Engine"
+      }, 
+      {
+         img: SudokuImg,
+         url: "https://vladciocoiu.github.io/sudoku-solver/",
+         title: "Sudoku Solver"
+      }, 
+      {
+         img: PathfindingImg,
+         url: "https://vladciocoiu.github.io/pathfinding-visualizer/",
+         title: "Pathfinding Visualizer"
+      }, 
+      {
+         img: WeatherImg,
+         url: "https://vladciocoiu.github.io/weather-app/",
+         title: "Weather App"
+      }, 
+   ];
+
    return (
-      <div className="projects">
+      <section className="projects">
          <SectionTitle name="projects" left={true} />
-         <ListProject
-            img={ChessEngineImg}
-            url="https://github.com/vladciocoiu/chess-engine"
-            title="Chess Engine"
-            number="0"
-         />
-         <ListProject
-            img={SudokuImg}
-            url="https://vladciocoiu.github.io/sudoku-solver/"
-            title="Sudoku Solver"
-            number="1"
-         />
-         <ListProject
-            img={PathfindingImg}
-            url="https://vladciocoiu.github.io/pathfinding-visualizer/"
-            title="Pathfinding Visualizer"
-            number="2"
-         />
-                  <ListProject
-            img={WeatherImg}
-            url="https://vladciocoiu.github.io/weather-app/"
-            title="Weather App"
-            number="3"
-         />
-      </div>
+         {projectList.map(({img, url, title}, idx) => <ListProject
+            img={img}
+            url={url}
+            title={title}
+            number={idx}
+            key={idx}
+         />)}
+      </section>
    );
 }

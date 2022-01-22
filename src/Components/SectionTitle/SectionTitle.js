@@ -3,17 +3,14 @@ import "./SectionTitle.css";
 
 export default function SectionTitle({ left, name }) {
    const titleRef = React.useRef();
-   const [isDiscovered, setIsDiscovered] = useState(false);
-   const handleScroll = () => {
-      setIsDiscovered(isVisible(titleRef, handleScroll));
-   };
+   const [isDiscovered, setIsDiscovered] = useState();
 
    useEffect(() => {
-      window.addEventListener("scroll", handleScroll);
-      return () => {
-         window.removeEventListener("scroll", handleScroll);
-      };
-   });
+      window.addEventListener("scroll", () => {
+         if(isDiscovered || !isVisible(titleRef)) return;
+         setIsDiscovered(true);
+      });
+   }, [isDiscovered]);
 
    let animationClass = "";
    if (isDiscovered) {
@@ -31,13 +28,12 @@ export default function SectionTitle({ left, name }) {
    );
 }
 
-const isVisible = (ref, handleScroll) => {
+const isVisible = (ref) => {
    if (!ref.current) return false;
    if (
       ref.current.offsetTop <=
       window.pageYOffset + (window.innerHeight * 2) / 3
    ) {
-      window.removeEventListener("scroll", handleScroll);
       return true;
    }
    return false;

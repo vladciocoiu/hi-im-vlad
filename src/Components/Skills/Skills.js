@@ -45,7 +45,7 @@ export default function Skills() {
    const animationClass = isDiscovered ? " skill-bar-animated " : "";
 
    return (
-      <div className="skills">
+      <section className="skills">
          <SectionTitle name="Skills" left={false} />
          <div ref={skillsRef} className={"skills-wrapper " + animationClass}>
             <h2 className="languages-heading">Languages</h2>
@@ -58,7 +58,7 @@ export default function Skills() {
                />
             ))}
          </div>
-      </div>
+      </section>
    );
 }
 

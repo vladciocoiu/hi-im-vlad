@@ -1,11 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./ListProject.css";
+
+const isVisible = (ref, handleScroll) => {
+   if (!ref.current) return false;
+   if (
+      ref.current.offsetTop <=
+      window.pageYOffset + (window.innerHeight * 4) / 5
+   ) {
+      window.removeEventListener("scroll", handleScroll);
+      return true;
+   }
+   return false;
+};
 
 export default function ListProject(props) {
    const { img, url, title, number } = props;
 
-   const ref = React.useRef();
+   const ref = useRef();
    const [isDiscovered, setIsDiscovered] = useState(false);
+
    const handleScroll = () => {
       setIsDiscovered(isVisible(ref, handleScroll));
    };
@@ -20,7 +33,7 @@ export default function ListProject(props) {
    let animationClass = isDiscovered ? " animated-slide-up " : "";
 
    return (
-      <div className={" project  project-" + number + animationClass} ref={ref}>
+      <article className={" project  project-" + number + animationClass} ref={ref}>
          <img src={img} alt=""></img>
          <div className="overlay">
             <h1 className="project-title">{title}</h1>
@@ -28,18 +41,6 @@ export default function ListProject(props) {
                Check it out
             </a>
          </div>
-      </div>
+      </article>
    );
 }
-
-const isVisible = (ref, handleScroll) => {
-   if (!ref.current) return false;
-   if (
-      ref.current.offsetTop <=
-      window.pageYOffset + (window.innerHeight * 2) / 3
-   ) {
-      window.removeEventListener("scroll", handleScroll);
-      return true;
-   }
-   return false;
-};

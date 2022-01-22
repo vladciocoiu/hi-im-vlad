@@ -118,6 +118,7 @@
   .project {
     width: 80vw;
     height: 38vw;
+    margin: 0;
   }
   .project img,
   .project .overlay {

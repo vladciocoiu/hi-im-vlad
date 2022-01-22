@@ -29,7 +29,7 @@ export default function Home() {
    }
 
    return (
-      <div className="home">
+      <section className="home">
          <h2>
             Hi, I'm{" "}
             <i className="home-name-placeholder">
@@ -52,7 +52,7 @@ export default function Home() {
                className={"arrow " + arrowClass}
             />
          </button>
-      </div>
+      </section>
    );
 }
 
