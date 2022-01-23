@@ -29,6 +29,7 @@
 
 .bar {
    width: auto;
+   transform: scaleX(0);
    height: 20px;
    background-color: #2f918c2f;
    margin-right: 10vw;
@@ -36,13 +37,18 @@
    border-radius: 10px;
 }
 
+.skill-bar-animated .skill-bar .bar {
+   transform-origin: left;
+   animation: animate-bar 1s ease-in-out forwards;
+}
+
 .progress-line {
-   transform-origin: 0% 50%;
+   transform-origin: left;
    position: relative;
    background-color: #2f918c;
    transform: scaleX(0);
    height: 100%;
-   border-radius: 10vw;
+   border-radius: 10px;
 }
 
 .skill-bar-animated .skill-bar .bar .progress-line {
@@ -59,43 +65,44 @@
 }
 
 .info.C\+\+ {
-   animation-delay: 1s;
+   animation-delay: 1.7s;
 }
 
 .info.JavaScript {
-   animation-delay: 1.3s;
+   animation-delay: 2s;
 }
 
 .info.Python {
-   animation-delay: 1.6s;
+   animation-delay: 2.3s;
 }
 .info.React\.js {
-   animation-delay: 1.9s;
+   animation-delay: 2.6s;
 }
 
 .info.Node\.js {
-   animation-delay: 2.2s;
+   animation-delay: 2.9s;
 }
 
 .progress-line.C\+\+ {
+   animation-delay: 0.7s;
    width: 75%;
 }
 
 .progress-line.JavaScript {
-   animation-delay: 0.3s;
+   animation-delay: 1s;
    width: 60%;
 }
 .progress-line.Python {
-   animation-delay: 0.6s;
+   animation-delay: 1.3s;
    width: 55%;
 }
 .progress-line.React\.js {
-   animation-delay: 0.9s;
+   animation-delay: 1.6s;
    width: 55%;
 }
 
 .progress-line.Node\.js {
-   animation-delay: 1.2s;
+   animation-delay: 1.9s;
    width: 30%;
 }
 
@@ -114,8 +121,7 @@
 
 @keyframes animate-bar {
    from {
-      width: 0%;
-      transform: scaleX(1);
+      transform: scaleX(0);
    }
    to {
       transform: scaleX(1);

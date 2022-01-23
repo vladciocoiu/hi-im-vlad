@@ -32,15 +32,12 @@ export default function Skills() {
       },
    ];
 
-   const handleScroll = () => {
-      if (isDiscovered) return;
-      setIsDiscovered(isVisible(skillsRef, handleScroll));
-   };
-
    useEffect(() => {
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
-   });
+      window.addEventListener("scroll", () => {
+         if(isDiscovered || !isVisible(skillsRef)) return;
+         setIsDiscovered(true);
+      });
+   }, [isDiscovered]);
 
    const animationClass = isDiscovered ? " skill-bar-animated " : "";
 
@@ -62,10 +59,9 @@ export default function Skills() {
    );
 }
 
-const isVisible = (ref, handleScroll) => {
+const isVisible = (ref) => {
    if (!ref.current) return false;
    if (ref.current.offsetTop <= window.pageYOffset + window.innerHeight / 2) {
-      window.removeEventListener("scroll", handleScroll);
       return true;
    }
    return false;
