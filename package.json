@@ -4,16 +4,17 @@
    "homepage": "https://vladciocoiu.github.io/hi-im-vlad",
    "private": true,
    "dependencies": {
-      "@mdi/font": "^5.9.55",
-      "@mdi/js": "^5.9.55",
-      "@mdi/react": "^1.5.0",
-      "@testing-library/jest-dom": "^5.16.1",
-      "@testing-library/react": "^12.1.2",
-      "@testing-library/user-event": "^7.2.1",
-      "react": "^16.14.0",
-      "react-dom": "^16.14.0",
-      "react-router-dom": "^5.3.0",
-      "react-scripts": "^2.1.3"
+      "@mdi/font": "^6.9.96",
+      "@mdi/js": "^6.9.96",
+      "@mdi/react": "^1.6.0",
+      "@mui/material": "^5.9.0",
+      "@testing-library/jest-dom": "^5.16.4",
+      "@testing-library/react": "^13.3.0",
+      "@testing-library/user-event": "^14.2.2",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-router-dom": "^6.3.0",
+      "react-scripts": "^5.0.1"
    },
    "scripts": {
       "predeploy": "npm run build",
@@ -39,6 +40,6 @@
       ]
    },
    "devDependencies": {
-      "gh-pages": "^2.2.0"
+      "gh-pages": "^4.0.0"
    }
 }
