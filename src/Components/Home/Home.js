@@ -4,7 +4,6 @@ import Icon from "@mdi/react";
 import { mdiArrowRight } from "@mdi/js";
 
 export default function Home() {
-   const [buttonHovered, setButtonHovered] = useState(null);
    const [currName, setCurrName] = useState("");
 
    const FULL_NAME = "Vlad Ciocoiu";
@@ -18,16 +17,6 @@ export default function Home() {
       }
    }, [currName]);
 
-   let arrowClass = "";
-   let buttonClass = "home-button ";
-   if (buttonHovered === true) {
-      arrowClass = "arrow-over";
-      buttonClass += "home-button-hovered";
-   } else if (buttonHovered === false) {
-      arrowClass = "arrow-out";
-      buttonClass += "home-button-rev";
-   }
-
    return (
       <section className="home">
          <h2>
@@ -40,16 +29,14 @@ export default function Home() {
          </h2>
          <h2>I create software.</h2>
          <button
-            className={buttonClass}
-            onMouseOver={() => setButtonHovered(true)}
-            onMouseOut={() => setButtonHovered(false)}
+            className="home-button"
             onClick={() => scrollToAbout()}
          >
             Find out more{" "}
             <Icon
                path={mdiArrowRight}
                size={1}
-               className={"arrow " + arrowClass}
+               className="arrow"
             />
          </button>
       </section>

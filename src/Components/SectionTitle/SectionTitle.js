@@ -23,7 +23,7 @@ export default function SectionTitle({ left, name }) {
          <h1 className={"section-title" + animationClass}>
             {name.toUpperCase()}
          </h1>
-         <div className={"underscore" + animationClass}></div>
+         <div className={"underline" + animationClass}></div>
       </div>
    );
 }

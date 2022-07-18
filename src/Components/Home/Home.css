@@ -26,11 +26,24 @@
 
    border: 2px solid #feffff;
    padding: 15px;
+
+   transition: 0.2s linear;
 }
 
 .arrow {
    position: relative;
    top: 4px;
+   transition: 0.2s linear;
+}
+
+.home-button:hover > .arrow {
+   transform: rotate(90deg);
+}
+
+.home-button:hover {
+   background: #17252a;
+   border-color: #17252a;
+   cursor: pointer;
 }
 
 .home-name {
@@ -38,6 +51,8 @@
    color: #fd5058;
    position: absolute;
    visibility: visible;
+
+   text-shadow: 2px 2px 8px rgba(0,0,0,0.3)
 }
 
 .home-name-placeholder {
@@ -59,59 +74,4 @@
    .home h2 {
       font-size: 30px;
    }
-}
-
-@keyframes home-btn-anim {
-   0% {
-      background: none;
-   }
-   100% {
-      background: #17252a;
-      border-color: #17252a;
-   }
-}
-
-@keyframes home-btn-anim-rev {
-   0% {
-      background: #17252a;
-      border-color: #17252a;
-   }
-   100% {
-      background: none;
-   }
-}
-
-.home-button-hovered {
-   animation: home-btn-anim 0.2s linear forwards;
-   cursor: pointer;
-}
-
-.home-button-rev {
-   animation: home-btn-anim-rev 0.2s linear forwards;
-}
-
-@keyframes arrow-spin {
-   from {
-      transform: rotate(0deg);
-   }
-   to {
-      transform: rotate(90deg);
-   }
-}
-
-@keyframes arrow-spin-reverse {
-   from {
-      transform: rotate(90deg);
-   }
-   to {
-      transform: rotate(0deg);
-   }
-}
-
-.arrow-over {
-   animation: arrow-spin 0.2s linear forwards;
-}
-
-.arrow-out {
-   animation: arrow-spin-reverse 0.2s linear forwards;
 }

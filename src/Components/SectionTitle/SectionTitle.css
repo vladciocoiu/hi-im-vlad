@@ -23,7 +23,7 @@
    text-align: center;
 }
 
-.underscore {
+.underline {
    display: block;
    opacity: 0;
    width: 80px;
@@ -31,6 +31,11 @@
    margin: auto;
    background-color: #17252a;
    color: #17252a;
+   transition: 0.2s ease-in-out;
+}
+
+.underline:hover, .section-title:hover ~ .underline {
+   width: 100px;
 }
 
 .animated-slide-in-right {
@@ -39,7 +44,7 @@
 .animated-slide-in-left {
    animation: slide-in-left 0.5s ease-in-out forwards;
 }
-.underscore {
+.underline {
    animation-delay: 0.5s;
 }
 

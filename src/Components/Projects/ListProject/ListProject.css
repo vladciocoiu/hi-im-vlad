@@ -6,8 +6,14 @@
   opacity: 0;
 }
 
+.project img {
+  pointer-events: none;
+}
+
 .project img,
 .project .overlay {
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
   width: 40vw;
   height: 19vw;
   position: absolute;
@@ -16,8 +22,6 @@
 }
 
 .project .overlay {
-  -webkit-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,7 +35,9 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  border: 1px solid #17252a;
+  z-index: 10;
+  -webkit-box-shadow: 2px 2px 15px 0px #17252abf;
+          box-shadow: 2px 2px 15px 0px #17252abf;
 }
 
 .project .overlay .project-title {
@@ -81,6 +87,8 @@
 
 .project .overlay:hover {
   background-color: rgba(255, 255, 255, 0.95);
+  -webkit-box-shadow: 2px 2px 30px -5px #17252abf;
+          box-shadow: 2px 2px 30px -5px #17252abf;
 }
 
 .project .overlay:hover a {
@@ -95,6 +103,11 @@
 .project .overlay:hover .project-title {
   opacity: 1;
   pointer-events: all;
+}
+
+.project .overlay:hover, .project .overlay:hover ~ img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 @media screen and (max-width: 1100px) {

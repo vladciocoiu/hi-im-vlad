@@ -8,6 +8,7 @@ export default function About() {
       "My hobbies include programming, reading, travelling, chess, speedcubing and learning about science.",
    ];
 
+   let a = false
    return (
       <section className="about">
          <SectionTitle name="about" left={true} />

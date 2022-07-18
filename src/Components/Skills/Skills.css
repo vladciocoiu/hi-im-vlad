@@ -1,41 +1,47 @@
 .skills {
   width: 100vw;
-  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: auto;
   background-color: #ebf5f5;
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "title title title" ". skills ." ". . .";
-  -ms-grid-rows: 2fr 6fr 1fr;
-      grid-template-rows: 2fr 6fr 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.chart-container {
+  grid-area: skills;
+  margin: auto;
+  width: 100vw;
+  padding: 0 20vw;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15vh;
 }
 
 .skills .title-wrapper {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: title;
 }
 
-.skills-wrapper {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: skills;
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "t1 t2" "l1 f1" "l2 f2" "l3 .";
-}
-
 .languages-heading {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: t1;
   padding-left: 10vw;
   padding-right: 10vw;
 }
 
 .frameworks-heading {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
   grid-area: t2;
   padding-left: 10vw;
   padding-right: 10vw;

@@ -1,24 +1,27 @@
 .skills {
    width: 100vw;
-   height: 100vh;
+   box-sizing: border-box;
+   height: auto;
    background-color: #ebf5f5;
-   display: grid;
-   grid-template-areas: "title title title" ". skills ." ". . .";
-   grid-template-rows: 2fr 6fr 1fr;
+   display: flex;
+   flex-direction: column;
+}
+
+.chart-container {
+   grid-area: skills;
+   margin: auto;
+   width: 100vw;
+   padding: 0 20vw;
+   height: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   margin-bottom: 15vh;
 }
 
 .skills .title-wrapper {
    grid-area: title;
-}
-
-.skills-wrapper {
-   grid-area: skills;
-   display: grid;
-   grid-template-areas:
-      "t1 t2"
-      "l1 f1"
-      "l2 f2"
-      "l3 .";
 }
 
 .languages-heading {

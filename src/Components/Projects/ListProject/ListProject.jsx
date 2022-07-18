@@ -33,14 +33,18 @@ export default function ListProject(props) {
    let animationClass = isDiscovered ? " animated-slide-up " : "";
 
    return (
-      <article className={" project  project-" + number + animationClass} ref={ref}>
-         <img src={img} alt=""></img>
-         <div className="overlay">
-            <h1 className="project-title">{title}</h1>
-            <a href={url} target="_blank" rel="noopener noreferrer">
-               Check it out
-            </a>
-         </div>
-      </article>
+      <>
+         <article 
+         className={" project  project-" + number + animationClass} 
+         ref={ref}>
+            <div className="overlay">
+               <h1 className="project-title">{title}</h1>
+               <a href={url} target="_blank" rel="noopener noreferrer">
+                  Check it out
+               </a>
+            </div>
+            <img src={img} alt=""></img>
+         </article>
+      </>
    );
 }

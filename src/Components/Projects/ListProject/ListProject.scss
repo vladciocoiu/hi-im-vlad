@@ -5,8 +5,12 @@
    margin-bottom: 10vh;
    opacity: 0;
 
+   img {
+      pointer-events: none;
+   }
    img,
    .overlay {
+      transition: 0.3s ease-out;
       width: 40vw;
       height: 19vw;
       position: absolute;
@@ -15,12 +19,13 @@
    }
 
    .overlay {
-      transition: 0.3s ease-out;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
-      border: 1px solid #17252a;
+      // border: 1px solid #17252a;
+      z-index: 10;
+      box-shadow: 2px 2px 15px 0px #17252abf;
 
       .project-title {
          color: #17252a;
@@ -62,6 +67,7 @@
 
    .overlay:hover {
       background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 2px 2px 30px -5px #17252abf;
 
       a {
          bottom: 20%;
@@ -75,6 +81,9 @@
          opacity: 1;
          pointer-events: all;
       }
+   }
+   .overlay:hover, .overlay:hover ~ img {
+      transform: scale(1.05)
    }
 }
 

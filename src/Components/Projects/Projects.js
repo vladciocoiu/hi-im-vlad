@@ -14,7 +14,7 @@ export default function Projects() {
       {
          img: ChessEngineImg,
          url: "https://github.com/vladciocoiu/chess-engine",
-         title: "Chess Engine"
+         title: "CiorapBot"
       }, 
       {
          img: SudokuImg,
