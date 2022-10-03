@@ -28,7 +28,7 @@ export default function Navbar() {
       });
    }, []);
 
-   const items = ["About", "Skills", "Projects"];
+   const items = ["About", "Projects"];
 
    const handleClick = (item) => {
       const section = document.querySelector("." + item.toLowerCase());

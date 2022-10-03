@@ -8,6 +8,7 @@ import SudokuImg from "../../images/projects/sudokuBig.png";
 import PathfindingImg from "../../images/projects/pathfindingBig.png";
 import ChessEngineImg from "../../images/projects/chessEngine.png";
 import WeatherImg from "../../images/projects/weatherBig.png";
+import SharedBlogImg from "../../images/projects/sharedBlog.png";
 
 export default function Projects() {
    const projectList = [
@@ -17,20 +18,25 @@ export default function Projects() {
          title: "CiorapBot"
       }, 
       {
-         img: SudokuImg,
-         url: "https://vladciocoiu.github.io/sudoku-solver/",
-         title: "Sudoku Solver"
-      }, 
+         img: SharedBlogImg,
+         url: "https://vladciocoiu.github.io/shared-blog",
+         title: "Shared Blog"
+      },
       {
          img: PathfindingImg,
          url: "https://vladciocoiu.github.io/pathfinding-visualizer/",
          title: "Pathfinding Visualizer"
       }, 
       {
+         img: SudokuImg,
+         url: "https://vladciocoiu.github.io/sudoku-solver/",
+         title: "Sudoku Solver"
+      }, 
+      {
          img: WeatherImg,
          url: "https://vladciocoiu.github.io/weather-app/",
          title: "Weather App"
-      }, 
+      }
    ];
 
    return (

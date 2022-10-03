@@ -69,3 +69,17 @@
       transform: translateX(0) scale(1);
    }
 }
+
+@media screen and (max-width: 600px) {
+   .section-title {
+      font-size: 26px;
+   }
+   .underline {
+      width: 65px;
+      height: 3px;
+   }
+   
+   .underline:hover, .section-title:hover ~ .underline {
+      width: 80px;
+   }
+}

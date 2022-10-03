@@ -1,18 +1,22 @@
 .projects {
    width: 100vw;
-   height: auto;
    min-height: 100vh;
    margin: auto;
    display: grid;
    grid-template-areas:
       "title title"
-      "p p"
-      "p p"
+      "p1 p2"
+      "p3 p4"
+      "p5 ."
       ". .";
-   grid-template-rows: 2fr 2fr 2fr 1fr;
+   grid-template-rows: 2fr 2fr 2fr 2fr 1fr;
    grid-gap: 0 5vw;
    justify-content: center;
    align-items: center;
+   background-color: #ebf5f5;
+}
+.projects .title-wrapper {
+   grid-area: title;
 }
 
 .projects h2 {
@@ -22,9 +26,7 @@
    margin: auto;
 }
 
-.projects .title-wrapper {
-   grid-area: title;
-}
+
 
 @media screen and (max-width: 770px) {
    .projects {
@@ -33,8 +35,10 @@
          "p"
          "p"
          "p"
+         "p"
+         "p"
          ".";
-      grid-template-rows: repeat(5, 2fr) 0.5fr;
+      grid-template-rows: repeat(6, 2fr) 0.5fr;
       grid-gap: 0;
    }
 }
