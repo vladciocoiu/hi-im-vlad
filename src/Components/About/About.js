@@ -36,7 +36,7 @@ export default function About() {
    const [activeSlideIdx, setActiveSlideIdx] = useState(0);
 
    return (
-      <section className="about">
+      <section className="about" id="about">
          <SectionTitle name="about" left={true} />
 
          <div className="slide-div">
@@ -45,7 +45,7 @@ export default function About() {
             </article>
          </div>
          <div className="about-slide-nav">
-               {text.map((el, idx) => <img  key={idx} className={idx === activeSlideIdx ? "active" : ""} onClick={() => setActiveSlideIdx(idx)} src={icons[idx]}></img>)}
+              {text.map((el, idx) => <a href="#about" key={idx}><img className={idx === activeSlideIdx ? "active" : ""} onClick={() => setActiveSlideIdx(idx)} src={icons[idx]}></img></a>)}
          </div>
       </section>
    );
