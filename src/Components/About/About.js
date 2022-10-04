@@ -3,10 +3,6 @@ import "./About.css";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import chessIcon from "../../images/icons/chess.png"
 import codeIcon from "../../images/icons/code.png"
-import dumbbellIcon from "../../images/icons/dumbbell.png"
-import footballIcon from "../../images/icons/football.png"
-import joystickIcon from "../../images/icons/joystick.png"
-import mathsIcon from "../../images/icons/maths.png"
 import rubikIcon from "../../images/icons/rubik.png"
 import travelIcon from "../../images/icons/travel.png"
 
