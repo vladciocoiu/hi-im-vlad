@@ -8,77 +8,54 @@
    flex-direction: column;
 }
 
-.dot {
-   width: 25px;
-   height: 25px;
-   margin: 3px;
-   border-radius: 50%;
-   border: 3px solid #2f918c;
-   transition: 0.2s ease-in-out;
-}
-.dot:hover {
-   cursor: pointer;
-   background-color: #1a53507f;
+.slide-div {
+   display: flex;
 }
 
-.active-dot:hover {
-   cursor: pointer;
-   background-color: #1a5350;
-}
-
-.active-dot {
-   margin: 0;
-   width: 28px;
-   height: 28px;
-   background-color: #1a5350;
-}
-
-.about-slide-dots {
+.about-slide-nav {
    display: flex;
    gap: 20px;
    width: 100vw;
    justify-content: center;
    align-items: center;
    margin-bottom: 10vh;
-   margin-top: 20vh;
+   margin-top: 10vh;
 }
 
 .about-text {
    transition: 0.5s ease-in-out;
-   width: 400vw;
-   position: relative;
    display: flex;
-   /* align-items: center; */
-   overflow-x: hidden;
-}
-
-.about-icons {
-   margin-top: 5vh;
-   width: 400vw;
-   display: flex;
-   position: relative;
-   transition: 0.5s ease-in-out;
-}
-
-.icons-slide {
    width: 100vw;
-   display: flex;
-   justify-content: center;
-   gap: 30px;
+   min-height: 300px;
 }
-.icons-slide img {
+
+.about-slide-nav img {
+   width: 24px;
+   height: 24px;
+   margin: 4px;
+   transition: 0.1s ease-in-out;
+}
+.about-slide-nav img:hover {
+   width: 28px;
+   height: 28px;
+   margin: 2px;
+   cursor: pointer;
+} 
+
+.about-slide-nav img.active {
    width: 32px;
    height: 32px;
+   margin: 0;
 }
+
 
 .about-p {
    width: 100vw;
    font-size: 20px;
-   text-align: left;
+   text-align: center;
    font-weight: normal;
    color: #17252a;
    line-height: 2;
-   margin-bottom: 20vh;
    padding-left: 10vw;
    padding-right: 10vw;
    white-space: pre-wrap;
@@ -86,7 +63,11 @@
 
 @media screen and (max-width: 990px) {
    .about-p {
-      font-size: 17px;
+      font-size: 16px;
       margin-bottom: 0;
+      text-align: left;
+   }
+   .about {
+      min-height: 200px;
    }
 }

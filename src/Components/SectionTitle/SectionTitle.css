@@ -82,4 +82,8 @@
    .underline:hover, .section-title:hover ~ .underline {
       width: 80px;
    }
+   .title-wrapper {
+      padding-top: 8vh;
+      padding-bottom: 8vh;
+   }
 }
